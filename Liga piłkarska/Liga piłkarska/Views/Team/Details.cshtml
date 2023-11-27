@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Liga_piłkarska.Models.Player>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Zawodnicy drużyny @Model</h1>
+
+<ul>
+    @foreach(var player in Model)
+    {
+            <li>@player.Name - @player.Surname</li>
+    }
+</ul>

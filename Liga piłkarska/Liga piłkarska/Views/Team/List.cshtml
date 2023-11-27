@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Liga_piłkarska.Models.Team>;
+
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Lista drużyn zgłoszonych do rozgrywek</h1>
+
+<ul>
+@foreach (var team in Model)
+{
+  <li>Nazwa: @team.Name</li>
+  <li>
+            <a href="@Url.Action("Details", "Team", new { Id = team.Id})">Zawodnicy</a>
+        </li>
+}
+</ul>
+
+
+
